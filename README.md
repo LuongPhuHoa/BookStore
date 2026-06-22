@@ -13,8 +13,7 @@ src/main/java/com/example/bookstore
 ├── dto          # Request/response DTOs
 ├── mapper       # MapStruct mapper interfaces
 ├── config       # Sample data initialization
-├── exception    # Custom exceptions and global API error handling
-└── util         # RequestContext based on ScopedValue
+└── exception    # Custom exceptions and global API error handling
 ```
 
 Controllers never expose JPA entities directly. Requests and responses use DTOs, services own business flow, repositories own persistence, and MapStruct owns object mapping.
@@ -52,25 +51,6 @@ Use virtual threads for I/O-bound work such as HTTP calls, database calls, file 
 
 ## Scoped Values
 
-Endpoint:
-
-```text
-GET /api/demo/scoped-value
-```
-
-The endpoint creates a `RequestContext` containing:
-
-- `requestId`
-- `currentUser`
-
-It binds that context with:
-
-```java
-ScopedValue.where(RequestContext.CURRENT, context).call(this::serviceLayerMethod);
-```
-
-Nested methods can then call `RequestContext.current()` without passing context parameters through every method.
-
 `ThreadLocal` stores mutable thread-associated state and can leak if it is not cleared correctly. `ScopedValue` is immutable, lexically scoped, and automatically unavailable after the bound operation finishes, which is a better fit for modern Java, especially when code uses virtual threads.
 
 In Java 21, `ScopedValue` is a preview API. The Maven build enables preview features for compilation, tests, and Spring Boot runs.
@@ -90,7 +70,6 @@ In Java 21, `ScopedValue` is a preview API. The Maven build enables preview feat
 | `PUT` | `/api/books/{id}` | Update book |
 | `DELETE` | `/api/books/{id}` | Delete book |
 | `GET` | `/api/demo/virtual-thread` | Run virtual-thread demo |
-| `GET` | `/api/demo/scoped-value` | Run scoped-value demo |
 
 ## Sample Data
 
@@ -173,5 +152,4 @@ Run Java 21 demos:
 
 ```bash
 curl http://localhost:8080/api/demo/virtual-thread
-curl http://localhost:8080/api/demo/scoped-value
 ```
