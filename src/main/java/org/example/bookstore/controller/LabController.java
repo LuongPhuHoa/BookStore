@@ -9,17 +9,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/books")
+@RequestMapping("/lab")
 @RequiredArgsConstructor
-public class BookController {
+public class LabController {
     private final BookService bookService;
 
-    @PostMapping
+    @PostMapping("/create-book")
     public ResponseEntity<BookResponseDto> createBook(@RequestBody BookRequestDto requestDto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(bookService.createBook(requestDto));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get-book/{id}")
     public ResponseEntity<BookResponseDto> getBook(@PathVariable Long id) {
         return ResponseEntity.ok(bookService.getBook(id));
     }

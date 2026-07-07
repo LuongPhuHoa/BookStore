@@ -1,44 +1,33 @@
 package org.example.bookstore.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
 
-@Getter
-@Setter
 @Entity
 @Table(name = "books")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private Long id;
 
+    @Column(nullable = false)
     private String title;
 
+    @Column(nullable = false, unique = true)
     private String isbn;
 
+    @Column(nullable = false)
     private BigDecimal price;
 
+    @Column(name = "published_year")
     private Integer publishedYear;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "author_id", nullable = false)
-    private Author author;
-
-    public Book() {
-    }
-
-    public Book(Long id, String title, String isbn, BigDecimal price, Integer publishedYear, Author author) {
-        this.id = id;
-        this.title = title;
-        this.isbn = isbn;
-        this.price = price;
-        this.publishedYear = publishedYear;
-        this.author = author;
-    }
-
 }
