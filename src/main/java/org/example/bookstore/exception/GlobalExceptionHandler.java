@@ -1,4 +1,4 @@
-﻿package org.example.bookstore.exception;
+package org.example.bookstore.exception;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;

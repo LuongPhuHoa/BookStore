@@ -1,4 +1,4 @@
-﻿package org.example.bookstore.entity;
+package org.example.bookstore.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

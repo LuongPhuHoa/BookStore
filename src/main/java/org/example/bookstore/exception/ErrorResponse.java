@@ -1,4 +1,4 @@
-﻿package org.example.bookstore.exception;
+package org.example.bookstore.exception;
 
 import lombok.Getter;
 import lombok.Setter;
