@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Lab controller exposing simple CRUD for Author under /lab/authors.
+ * Lab controller exposing Author CRUD under /lab/authors.
+ * Endpoints are intended for manual exploration and learning.
  */
 @RestController
 @RequestMapping("/lab/authors")

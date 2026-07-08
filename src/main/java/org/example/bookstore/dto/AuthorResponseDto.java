@@ -1,8 +1,6 @@
 package org.example.bookstore.dto;
 
-/**
- * AuthorResponseDto - compact output DTO for author APIs.
- */
+/** Compact response DTO returned to clients. */
 public record AuthorResponseDto(
     Long id,
     String name,

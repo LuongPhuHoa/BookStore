@@ -1,6 +1,7 @@
 ### BookStore API Test Collection
 ### Base URL Configuration
 @baseUrl = http://localhost:8080/api
+@baseUrlLab = http://localhost:8080/lab
 @contentType = application/json
 
 ###
@@ -120,6 +121,19 @@ Content-Type: {{contentType}}
   "publishedYear": 1977,
   "authorId": 3
 }
+
+### Create Book using create-book endpoint
+POST {{baseUrlLab}}/create-book
+Content-Type: {{contentType}}
+
+{
+  "title": "The Shining",
+  "isbn": "978-0385333312",
+  "price": 9.99,
+  "publishedYear": 1977,
+  "authorId": 3
+}
+
 
 ### Get All Books
 GET {{baseUrl}}/books

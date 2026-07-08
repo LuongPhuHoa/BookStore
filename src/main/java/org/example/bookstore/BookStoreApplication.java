@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BookStoreApplication {
 
     /** Main entry point for the Spring Boot application. */
-    static void main(String[] args) {
+    public static void main(String[] args) {
         // SpringApplication.run() is the magic line that starts everything
         // First argument: this class (BookStoreApplication.class)
         // Second argument: command-line args (if any)

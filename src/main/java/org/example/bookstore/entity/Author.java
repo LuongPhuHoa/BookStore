@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Author entity used by lab examples. Compact and focused.
+ * Author entity used in lab examples.
+ *
+ * - Maps to authors table
+ * - Minimal fields for demos: id, name, nationality
  */
 @Entity
 @Table(name = "authors")

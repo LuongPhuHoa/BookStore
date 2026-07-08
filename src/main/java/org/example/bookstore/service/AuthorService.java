@@ -13,7 +13,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Service layer for Author. Provides simple CRUD used by lab endpoints.
+ * Service providing simple CRUD for Author used in lab controllers.
+ * Keeps business logic minimal so lab focuses on JPA behavior.
  */
 @Service
 @RequiredArgsConstructor

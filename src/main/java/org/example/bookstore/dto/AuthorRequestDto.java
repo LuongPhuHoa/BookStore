@@ -1,8 +1,6 @@
 package org.example.bookstore.dto;
 
-/**
- * AuthorRequestDto - compact input DTO for author APIs.
- */
+/** Compact input DTO for Author create/update requests. */
 public record AuthorRequestDto(
     String name,
     String nationality
