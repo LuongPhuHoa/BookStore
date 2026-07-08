@@ -115,6 +115,8 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <mainClass>org.example.bookstore.BookStoreApplication</mainClass>
+                    <startClass>org.example.bookstore.BookStoreApplication</startClass>
                     <jvmArguments>--enable-preview</jvmArguments>
                     <excludes>
                         <exclude>
