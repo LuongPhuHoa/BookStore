@@ -20,14 +20,16 @@ public class BookService {
     /** Create and persist a new book. */
     @Transactional  // CRITICAL: Enables Spring transaction management for this method
     public BookResponseDto createBook(BookRequestDto requestDto) {
-        // STEP 1: Convert DTO to Entity
-        // MapStruct (generated code) creates Book instance:
-//        Book book = new Book();
-//        book.setTitle(requestDto.title());
-//        book.setIsbn(requestDto.isbn());
-//        book.setPrice(requestDto.price());
-//        book.setPublishedYear(requestDto.publishedYear());
-//        book.setId(null);  // Not in DTO
+        /*
+         STEP 1: Convert DTO to Entity
+         MapStruct (generated code) creates Book instance:
+                Book book = new Book();
+                book.setTitle(requestDto.title());
+                book.setIsbn(requestDto.isbn());
+                book.setPrice(requestDto.price());
+                book.setPublishedYear(requestDto.publishedYear());
+                book.setId(null);  // Not in DTO
+        */
         Book book = bookMapper.toEntity(requestDto);
         
         // STEP 2: Persist entity to database
@@ -41,21 +43,23 @@ public class BookService {
         // - Add Book instance to Persistence Context
         // - Enable dirty checking on this entity
         Book savedBook = bookRepository.save(book);
-        // At this point: savedBook.id is still null (INSERT not yet executed)
-        //
-        // However, when we call bookMapper.toResponseDto() below,
-        // Spring's transaction proxy triggers implicit flush()
-        // So by the time we return, the ID has been populated
-        
-        // STEP 3: Convert Entity back to DTO for response
-        // MapStruct generates code to create BookResponseDto:
-//         return new BookResponseDto(
-//             savedBook.getId(),        // ← Now has value (1, 2, 3, etc.)
-//             savedBook.getTitle(),
-//             savedBook.getIsbn(),
-//             savedBook.getPrice(),
-//             savedBook.getPublishedYear()
-//         );
+        /*
+         At this point: savedBook.id is still null (INSERT not yet executed)
+
+         However, when we call bookMapper.toResponseDto() below,
+         Spring's transaction proxy triggers implicit flush()
+         So by the time we return, the ID has been populated
+         STEP 3: Convert Entity back to DTO for response
+         MapStruct generates code to create BookResponseDto:
+                 return new BookResponseDto(
+                     savedBook.getId(),        // ← Now has value (1, 2, 3, etc.)
+                     savedBook.getTitle(),
+                     savedBook.getIsbn(),
+                     savedBook.getPrice(),
+                     savedBook.getPublishedYear()
+                 );
+        */
+
         return bookMapper.toResponseDto(savedBook);
         // After method returns:
         // - Spring transaction proxy detects end of method
