@@ -3,6 +3,8 @@ package org.example.bookstore;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.TimeZone;
+
 /** BookStoreApplication - Main entry point for the Hibernate Learning Laboratory. */
 @SpringBootApplication  // Enables @Configuration + @ComponentScan + @EnableAutoConfiguration
 public class BookStoreApplication {
@@ -12,6 +14,7 @@ public class BookStoreApplication {
         // SpringApplication.run() is the magic line that starts everything
         // First argument: this class (BookStoreApplication.class)
         // Second argument: command-line args (if any)
+        TimeZone.setDefault(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
         SpringApplication.run(BookStoreApplication.class, args);
     }
 }
