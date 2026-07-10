@@ -36,6 +36,12 @@ public record BookResponseDto(
      * Can be null if not provided
      * Example: 2018, or null
      */
-    Integer publishedYear
+    Integer publishedYear,
+
+    /** ID of the author associated with this book. */
+    Long authorId,
+
+    /** Author name copied into the response while the transaction is open. */
+    String authorName
 ) {}
 

@@ -1,9 +1,9 @@
 package org.example.bookstore.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.example.bookstore.dto.BookRequestDto;
 import org.example.bookstore.dto.BookResponseDto;
 import org.example.bookstore.service.BookService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -58,6 +58,20 @@ public class LabController {
         System.out.println("═══════════════════════════════════════════════════════════════\n");
         
         return ResponseEntity.ok(response);
+    }
+
+    /**
+     * Create a book, throw an exception, and observe rollback.
+     */
+    @PostMapping("/rollback-book")
+    public ResponseEntity<Void> createBookAndRollback(@RequestBody BookRequestDto requestDto) {
+        System.out.println("LAB ENDPOINT: rollback-book invoked");
+        System.out.println("STEP 1: Calling bookService.createBookAndRollback()...");
+        System.out.println("STEP 2: Expect INSERT attempt followed by transaction rollback");
+
+        bookService.createBookAndRollback(requestDto);
+
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
 

@@ -32,6 +32,11 @@ public record BookRequestDto(
       Typical range: 1900-2100
       Nullable: Yes (if not provided, defaults to null)
      */
-    Integer publishedYear
+    Integer publishedYear,
+
+    /*
+      Existing author ID. Commit 04 uses this to attach each Book to one Author.
+     */
+    Long authorId
 ) {}
 

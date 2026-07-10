@@ -6,11 +6,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Author entity used in lab examples.
  *
  * - Maps to authors table
- * - Minimal fields for demos: id, name, nationality
+ * - Owns many books through Book.author
  */
 @Entity
 @Table(name = "authors")
@@ -28,4 +31,7 @@ public class Author {
 
     @Column
     private String nationality;
+
+    @OneToMany(mappedBy = "author")
+    private List<Book> books = new ArrayList<>();
 }

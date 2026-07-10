@@ -1,12 +1,14 @@
 package org.example.bookstore.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.example.bookstore.dto.BookRequestDto;
 import org.example.bookstore.dto.BookResponseDto;
 import org.example.bookstore.service.BookService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /** BookController - HTTP REST endpoints for book operations. */
 @RestController
@@ -31,13 +33,21 @@ public class BookController {
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
+    /**
+     * Get a book by ID via HTTP GET.
+     */
+    @GetMapping
+    public ResponseEntity<List<BookResponseDto>> getAllBooks() {
+        return ResponseEntity.ok(bookService.getAllBooks());
+    }
+
     /** Get a book by ID via HTTP GET. */
     @GetMapping("/{id}")  // GET /api/books/{id}
     public ResponseEntity<BookResponseDto> getBook(@PathVariable Long id) {
         // Call service to fetch book by ID
         // Service queries database and converts to DTO
-        // If not found: throws IllegalArgumentException
-        //   → GlobalExceptionHandler catches and returns 404
+        // If not found: service throws ResponseStatusException
+        //   → Spring Boot basic error handling returns 404
         BookResponseDto response = bookService.getBook(id);
         
         // Return 200 OK status with response body
