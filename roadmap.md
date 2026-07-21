@@ -1,522 +1,374 @@
-# Java Backend Roadmap (Junior → Mid)
+# Java Backend Mastery Roadmap (Implementation First)
 
-> **Mục tiêu:** Hiểu bản chất Java Core, JVM và Spring thay vì chỉ biết sử dụng API.
-
----
-
-# Giai đoạn 1 - Java Core
-
-## Chương 1 - OOP
-
-### Kiến thức
-
-* SOLID Principles
-* Encapsulation
-* Inheritance
-* Polymorphism
-* Abstract Class vs Interface
-* Composition over Inheritance
-* Method Overloading & Overriding
-* Static Binding vs Dynamic Binding
-* Object Lifecycle
-* `Object` class
-
-    * `equals()`
-    * `hashCode()`
-    * `toString()`
-    * `clone()`
-* Immutable Object
-* Record (Java 16+)
-* Sealed Class (Java 17+)
-
-### Mini Project
-
-Library Management System
+> **Triết lý học:** Không học API trước, học implementation trước.
+>
+> Chu trình học:
+>
+> **Question → Prediction → Code → JDK Source → Implementation → Interview → Best Practice**
 
 ---
 
-## Chương 2 - Collections Framework
+# Phase 1 - Java Language
 
-### List
+## Module 1 - OOP
 
-* ArrayList
-* LinkedList
-* Vector
-* CopyOnWriteArrayList
+### 1. Fundamentals
 
-### Set
+* [x] Encapsulation
+* [x] Inheritance
+* [x] Polymorphism
+* [x] Abstract Class vs Interface
+* [x] Method Overloading
+* [x] Method Overriding
+* [x] Static Binding
+* [x] Dynamic Binding
 
-* HashSet
-* LinkedHashSet
-* TreeSet
+### 2. Object Class
 
-### Queue / Deque
+* [x] equals()
+* [x] hashCode()
+* [ ] toString() ⭐⭐⭐⭐
+* [ ] clone() ⭐⭐
 
-* Queue
-* PriorityQueue
-* ArrayDeque
+### 3. Design Principles
 
-### Map
+* [ ] Composition over Inheritance ⭐⭐⭐⭐⭐
+* [ ] SOLID Principles ⭐⭐⭐⭐⭐
 
-* HashMap
-* LinkedHashMap
-* TreeMap
-* Hashtable
-* ConcurrentHashMap
+### 4. Modern Java
 
-### Internals
+* [ ] Record ⭐⭐⭐⭐
+* [ ] Sealed Class ⭐⭐⭐⭐
 
-* Hash Function
-* Hash Collision
-* Bucket
-* Load Factor
-* Capacity
-* Resize
-* Treeify
-* Red-Black Tree
-* Iterator
-* Fail Fast
-* ConcurrentModificationException
+### Mini Projects
 
-### Mini Project
-
-Implement a simplified HashMap from scratch.
+* [ ] Library Management
+* [ ] Banking System
+* [ ] Student Management
 
 ---
 
-## Chương 3 - Generics
+# Module 2 - Collections Framework
 
-### Kiến thức
+## List
 
-* Generic Class
-* Generic Method
-* Type Erasure
-* Wildcards
-* `? extends`
-* `? super`
-* PECS Principle
-* Bridge Method
-* Heap Pollution
-* Raw Type
-* Generic Array
+* [x] ArrayList ⭐⭐⭐⭐⭐
+* [x] LinkedList ⭐⭐⭐⭐
+* [ ] Vector ⭐⭐
+* [ ] CopyOnWriteArrayList ⭐⭐⭐⭐
 
-### Mini Project
+## Set
 
-Build a Generic Repository.
+* [x] HashSet ⭐⭐⭐⭐⭐
+* [ ] LinkedHashSet ⭐⭐⭐
+* [ ] TreeSet ⭐⭐⭐⭐
 
----
+## Queue / Deque
 
-## Chương 4 - Exception Handling
+* [ ] Queue Interface ⭐⭐⭐
+* [ ] PriorityQueue ⭐⭐⭐⭐
+* [ ] ArrayDeque ⭐⭐⭐⭐⭐
 
-### Kiến thức
+## Map
 
-* Throwable Hierarchy
-* Error vs Exception
-* Checked Exception
-* Unchecked Exception
-* `throw`
-* `throws`
-* try-with-resources
-* Suppressed Exception
-* Multi Catch
-* Custom Exception
-* Exception Best Practices
+* [x] HashMap ⭐⭐⭐⭐⭐
+* [ ] LinkedHashMap ⭐⭐⭐⭐
+* [ ] TreeMap ⭐⭐⭐⭐
+* [ ] Hashtable ⭐⭐
+* [ ] ConcurrentHashMap ⭐⭐⭐⭐⭐
 
-### Mini Project
+## Collection Internals
 
-Bank Transfer Service
+* [x] Hash Function
+* [x] Bucket
+* [x] Collision
+* [x] Resize
+* [x] Capacity
+* [x] Load Factor
+* [x] Treeify
+* [x] Iterator
+* [x] ConcurrentModificationException
+* [ ] Fail-Fast Mechanism ⭐⭐⭐⭐
 
----
+### Mini Projects
 
-## Chương 5 - I/O & NIO
-
-### Kiến thức
-
-* File
-* Path
-* Files
-* InputStream
-* OutputStream
-* Reader
-* Writer
-* Buffered Streams
-* Serialization
-* NIO
-* ByteBuffer
-
-### Mini Project
-
-File Search Engine
+* [ ] Implement HashMap
+* [ ] LRU Cache
+* [ ] Custom Collection
 
 ---
 
-# Giai đoạn 2 - Functional Programming
+# Module 3 - Generics
 
-## Chương 6 - Lambda Expressions
+* [x] Generic Class
+* [x] Generic Method
+* [x] Type Erasure
+* [x] Wildcards
+* [x] `? extends`
+* [x] `? super`
+* [x] PECS
 
-### Kiến thức
+## Advanced Generics
 
-* Functional Interface
-* Lambda Expression
-* Method Reference
-* Default Methods
-* Static Methods in Interface
-* Closure
-* Effectively Final
+* [ ] Bridge Method ⭐⭐⭐⭐
+* [ ] Heap Pollution ⭐⭐⭐⭐
+* [ ] Generic Array ⭐⭐⭐
+* [ ] Raw Type ⭐⭐⭐
 
-### Mini Project
+### Mini Projects
 
-Command Pattern using Lambda.
-
----
-
-## Chương 7 - Stream API
-
-### Kiến thức
-
-* Stream Pipeline
-* Intermediate Operations
-* Terminal Operations
-* map
-* flatMap
-* filter
-* reduce
-* collect
-* Collector
-* Parallel Stream
-* Spliterator
-
-### Mini Project
-
-Sales Analytics Engine
+* [ ] Generic Repository
+* [ ] Generic Cache
 
 ---
 
-## Chương 8 - Optional
+# Module 4 - Exception Handling
 
-### Kiến thức
+* [ ] Throwable Hierarchy
+* [ ] Error vs Exception
+* [ ] Checked Exception
+* [ ] Unchecked Exception
+* [ ] throw / throws
+* [ ] try-with-resources
+* [ ] Suppressed Exception
+* [ ] Multi Catch
+* [ ] Custom Exception
+* [ ] Exception Best Practices
 
-* Optional Design
-* map
-* flatMap
-* filter
-* orElse
-* orElseGet
-* orElseThrow
+### Mini Projects
 
-### Mini Project
-
-Null-safe Order Service
-
----
-
-## Chương 9 - Date & Time API
-
-### Kiến thức
-
-* LocalDate
-* LocalDateTime
-* Instant
-* ZonedDateTime
-* Duration
-* Period
-* ZoneId
-* DateTimeFormatter
-
-### Mini Project
-
-Booking Calendar
+* [ ] Banking Transfer
+* [ ] File Processing
 
 ---
 
-# Giai đoạn 3 - Concurrency
+# Module 5 - IO & NIO
 
-## Chương 10 - Thread Basics
+* [ ] File
+* [ ] Path
+* [ ] Files
+* [ ] InputStream
+* [ ] OutputStream
+* [ ] Reader
+* [ ] Writer
+* [ ] Buffered Streams
+* [ ] Serialization
+* [ ] NIO
+* [ ] ByteBuffer
 
-* Thread Lifecycle
-* Runnable
-* Callable
-* Future
-* FutureTask
+### Mini Projects
 
----
-
-## Chương 11 - Synchronization
-
-* synchronized
-* volatile
-* Atomic Classes
-* Lock API
-* ReentrantLock
-* ReadWriteLock
+* [ ] File Search Engine
+* [ ] Log Analyzer
 
 ---
 
-## Chương 12 - Java Memory Model (JMM)
+# Phase 2 - Functional Programming
 
-* Heap
-* Stack
-* Method Area
-* Happens-Before
-* Escape Analysis
-* Cache Line
-* False Sharing
+## Lambda
 
----
+* [ ] Functional Interface
+* [ ] Lambda Expression
+* [ ] Method Reference
+* [ ] Closure
+* [ ] Effectively Final
 
-## Chương 13 - Executor Framework
+## Stream API
 
-* Executor
-* ExecutorService
-* ThreadPoolExecutor
-* ScheduledExecutorService
-* ForkJoinPool
-* CompletableFuture
+* [ ] Stream Pipeline
+* [ ] Intermediate Operations
+* [ ] Terminal Operations
+* [ ] Collector
+* [ ] Reduce
+* [ ] flatMap
+* [ ] Parallel Stream
+* [ ] Spliterator
 
----
+## Optional
 
-## Chương 14 - Modern Concurrency (Java 21)
+* [ ] map
+* [ ] flatMap
+* [ ] filter
+* [ ] orElse
+* [ ] orElseGet
+* [ ] orElseThrow
 
-* Virtual Threads
-* Project Loom
-* Structured Concurrency (Preview)
-* Scoped Values
-* Pinning
-* Carrier Threads
+## Date & Time API
 
-### Mini Project
-
-Concurrent Web Crawler
-
----
-
-# Giai đoạn 4 - JVM Internals
-
-## Chương 15 - Class Loading
-
-* Bootstrap ClassLoader
-* Platform ClassLoader
-* Application ClassLoader
-* Delegation Model
+* [ ] LocalDate
+* [ ] LocalDateTime
+* [ ] Instant
+* [ ] Duration
+* [ ] Period
+* [ ] ZoneId
+* [ ] Formatter
 
 ---
 
-## Chương 16 - JVM Memory
+# Phase 3 - Concurrency
 
-* Heap
-* Stack
-* Metaspace
-* String Pool
-* Direct Memory
+## Thread Basics
 
----
+* [ ] Thread
+* [ ] Runnable
+* [ ] Callable
+* [ ] Future
 
-## Chương 17 - Garbage Collection
+## Synchronization
 
-* Serial GC
-* Parallel GC
-* CMS (Historical)
-* G1 GC
-* ZGC
-* Shenandoah
-* Young GC
-* Full GC
+* [ ] synchronized
+* [ ] volatile
+* [ ] Atomic Classes
+* [ ] Lock API
+* [ ] ReentrantLock
 
----
+## Executor Framework
 
-## Chương 18 - JVM Diagnostics & Tuning
+* [ ] ExecutorService
+* [ ] ThreadPoolExecutor
+* [ ] ForkJoinPool
+* [ ] CompletableFuture
 
-* Heap Dump
-* Thread Dump
-* jcmd
-* jmap
-* jstack
-* VisualVM
-* Java Flight Recorder (JFR)
+## Java Memory Model
 
-### Mini Project
+* [ ] Happens-Before
+* [ ] Visibility
+* [ ] Cache Line
+* [ ] False Sharing
 
-GC Benchmark
+## Java 21
 
----
-
-# Giai đoạn 5 - Reflection & Annotation
-
-## Chương 19
-
-### Kiến thức
-
-* Reflection API
-* Annotation
-* Dynamic Proxy
-* MethodHandle
-* Bytecode Basics
-
-### Mini Project
-
-Mini Spring IoC Container
+* [ ] Virtual Threads
+* [ ] Scoped Values
+* [ ] Structured Concurrency
 
 ---
 
-# Giai đoạn 6 - Spring Foundation
+# Phase 4 - JVM
+
+* [ ] Class Loading
+* [ ] Bytecode
+* [ ] Heap
+* [ ] Stack
+* [ ] Metaspace
+* [ ] String Pool
+* [ ] Garbage Collection
+* [ ] JIT Compiler
+* [ ] Escape Analysis
+* [ ] JVM Tuning
+
+---
+
+# Phase 5 - Reflection & Annotation
+
+* [ ] Reflection
+* [ ] Annotation
+* [ ] Dynamic Proxy
+* [ ] MethodHandle
+* [ ] Bytecode Basics
+
+### Mini Projects
+
+* [ ] Mini IoC Container
+* [ ] Custom Dependency Injection
+
+---
+
+# Phase 6 - Spring Ecosystem
 
 ## Spring Core
 
-* IoC Container
-* Dependency Injection
-* Bean Lifecycle
-* Bean Scope
+* [ ] IoC
+* [ ] Dependency Injection
+* [ ] Bean Lifecycle
+* [ ] Bean Scope
 
 ## Spring AOP
 
-* Proxy
-* Advice
-* Pointcut
+* [ ] Proxy
+* [ ] Advice
+* [ ] Pointcut
 
 ## Spring Transaction
 
-* @Transactional
-* Propagation
-* Isolation
-* Rollback Rules
+* [ ] Propagation
+* [ ] Isolation
+* [ ] Rollback Rules
 
 ## Spring MVC
 
-* DispatcherServlet
-* Controller
-* Request Mapping
-* Validation
+* [ ] DispatcherServlet
+* [ ] Controller
+* [ ] Validation
+* [ ] Exception Handling
 
 ## Spring Data JPA
 
-* Entity Lifecycle
-* Persistence Context
-* Dirty Checking
-* Lazy vs Eager Loading
-* N+1 Problem
+* [ ] Entity Lifecycle
+* [ ] Persistence Context
+* [ ] Dirty Checking
+* [ ] Fetch Strategies
+* [ ] N+1 Problem
 
 ## Spring Security
 
-* Authentication
-* Authorization
-* JWT
-* OAuth2 Basics
+* [ ] Authentication
+* [ ] Authorization
+* [ ] JWT
+* [ ] OAuth2
 
 ### Mini Project
 
-E-commerce Backend
+* [ ] E-commerce Backend
 
 ---
 
-# Giai đoạn 7 - Java 21+
+# Phase 7 - Design Patterns
 
-### Kiến thức
-
-* Record
-* Sealed Classes
-* Pattern Matching
-* Pattern Matching for switch
-* Virtual Threads
-* Scoped Values
-* Foreign Function & Memory API
-* String Templates (nếu phiên bản hỗ trợ)
-
----
-
-# Giai đoạn 8 - Design Patterns
-
-Tập trung vào các pattern thường gặp trong Java Backend.
-
-* Singleton
-* Factory
-* Builder
-* Strategy
-* Template Method
-* Observer
-* Decorator
-* Adapter
-* Proxy
-* Chain of Responsibility
+* [ ] Singleton
+* [ ] Factory
+* [ ] Builder
+* [ ] Strategy
+* [ ] Template Method
+* [ ] Observer
+* [ ] Decorator
+* [ ] Adapter
+* [ ] Proxy
+* [ ] Chain of Responsibility
 
 ---
 
-# Giai đoạn 9 - Source Code Reading
+# Phase 8 - Source Code Reading
 
-Đọc source code của JDK để hiểu cách các kỹ sư Java thiết kế API.
+## JDK Collections
 
-## Collections
+* [ ] ArrayList
+* [ ] HashMap
+* [ ] LinkedHashMap
+* [ ] ConcurrentHashMap
 
-* ArrayList
-* HashMap
-* ConcurrentHashMap
-* LinkedHashMap
+## JDK Concurrency
 
-## Concurrency
-
-* ThreadPoolExecutor
-* CompletableFuture
-* ReentrantLock
+* [ ] ThreadPoolExecutor
+* [ ] CompletableFuture
+* [ ] ReentrantLock
 
 ## Functional Programming
 
-* Stream
-* Collectors
-* Optional
-
----
-
-# Lộ trình học đề xuất
-
-## Java Core
-
-* [x] OOP
-* [x] Collections
-* [ ] Generics
-* [ ] Exception Handling
-* [ ] I/O & NIO
-
-## Functional Programming
-
-* [ ] Lambda
-* [ ] Stream API
+* [ ] Stream
+* [ ] Collectors
 * [ ] Optional
-* [ ] Date & Time API
 
-## Concurrency
+---
 
-* [ ] Thread
-* [ ] Synchronization
-* [ ] Java Memory Model
-* [ ] Executor Framework
-* [ ] Virtual Threads
+# Learning Strategy
 
-## JVM
+Đối với mỗi chủ đề:
 
-* [ ] Class Loading
-* [ ] Memory Management
-* [ ] Garbage Collection
-* [ ] JVM Tuning
-
-## Advanced Java
-
-* [ ] Reflection
-* [ ] Design Patterns
-* [ ] Source Code Reading
-
-## Spring Ecosystem
-
-* [ ] Spring Core
-* [ ] Spring Boot
-* [ ] Spring MVC
-* [ ] Spring Data JPA
-* [ ] Spring Security
-
-## Backend Ecosystem
-
-* [ ] Docker
-* [ ] Kubernetes
-* [ ] Kafka
-* [ ] Redis
-* [ ] Elasticsearch
-* [ ] AWS Fundamentals
-* [ ] System Design Basics
+* [ ] Dự đoán kết quả (Prediction)
+* [ ] Viết code kiểm chứng
+* [ ] Đọc source JDK
+* [ ] Hiểu implementation
+* [ ] Trả lời câu hỏi phỏng vấn
+* [ ] Áp dụng vào mini project
+* [ ] Tổng kết best practices
