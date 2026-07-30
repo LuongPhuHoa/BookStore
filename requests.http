@@ -2,6 +2,34 @@
 ### Base URL Configuration
 @baseUrl = http://localhost:8080/api
 @contentType = application/json
+@token = paste-access-token-from-login-response-here
+
+###
+### ============================================
+### JWT AUTHENTICATION
+### ============================================
+
+### Login as reader (GET access only)
+POST {{baseUrl}}/auth/login
+Content-Type: {{contentType}}
+
+{
+  "username": "user",
+  "password": "password"
+}
+
+### Login as admin (GET and write access)
+POST {{baseUrl}}/auth/login
+Content-Type: {{contentType}}
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
+
+### Protected request: first paste a returned accessToken into @token above
+GET {{baseUrl}}/books
+Authorization: Bearer {{token}}
 
 ###
 ### ============================================

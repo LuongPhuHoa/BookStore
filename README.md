@@ -57,19 +57,46 @@ In Java 21, `ScopedValue` is a preview API. The Maven build enables preview feat
 
 ## API Endpoints
 
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| `GET` | `/api/authors` | List authors |
-| `GET` | `/api/authors/{id}` | Get author by id |
-| `POST` | `/api/authors` | Create author |
-| `PUT` | `/api/authors/{id}` | Update author |
-| `DELETE` | `/api/authors/{id}` | Delete author |
-| `GET` | `/api/books` | List books |
-| `GET` | `/api/books/{id}` | Get book by id |
-| `POST` | `/api/books` | Create book |
-| `PUT` | `/api/books/{id}` | Update book |
-| `DELETE` | `/api/books/{id}` | Delete book |
-| `GET` | `/api/demo/virtual-thread` | Run virtual-thread demo |
+| Method   | Endpoint                   | Description                             |
+|----------|----------------------------|-----------------------------------------|
+| `POST`   | `/api/auth/login`          | Authenticate and receive a one-hour JWT |
+| `GET`    | `/api/authors`             | List authors                            |
+| `GET`    | `/api/authors/{id}`        | Get author by id                        |
+| `POST`   | `/api/authors`             | Create author                           |
+| `PUT`    | `/api/authors/{id}`        | Update author                           |
+| `DELETE` | `/api/authors/{id}`        | Delete author                           |
+| `GET`    | `/api/books`               | List books                              |
+| `GET`    | `/api/books/{id}`          | Get book by id                          |
+| `POST`   | `/api/books`               | Create book                             |
+| `PUT`    | `/api/books/{id}`          | Update book                             |
+| `DELETE` | `/api/books/{id}`          | Delete book                             |
+| `GET`    | `/api/demo/virtual-thread` | Run virtual-thread demo                 |
+
+## JWT Security
+
+The API is stateless: Spring does not create an HTTP session. Log in with one of
+the demonstration accounts:
+
+- `user` / `password` has `USER` and may read books and authors.
+- `admin` / `admin123` has `USER` and `ADMIN` and may also create, update, and delete.
+
+```bash
+curl -X POST http://localhost:8080/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"admin","password":"admin123"}'
+```
+
+Send the returned token on protected requests:
+
+```bash
+curl http://localhost:8080/api/books \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
+
+`security.jwt.secret` is only a local-development default. Set `JWT_SECRET` to a
+Base64-encoded random secret of at least 32 bytes outside development. Passwords
+are BCrypt hashes in memory; a production application would load users and hashes
+from the database.
 
 ## Sample Data
 

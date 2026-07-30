@@ -27,24 +27,18 @@
 
 * [x] equals()
 * [x] hashCode()
-* [ ] toString() ⭐⭐⭐⭐
-* [ ] clone() ⭐⭐
+* [x] toString() ⭐⭐⭐⭐
+* [x] clone() ⭐⭐
 
 ### 3. Design Principles
 
-* [ ] Composition over Inheritance ⭐⭐⭐⭐⭐
-* [ ] SOLID Principles ⭐⭐⭐⭐⭐
+* [x] Composition over Inheritance ⭐⭐⭐⭐⭐
+* [x] SOLID Principles ⭐⭐⭐⭐⭐
 
 ### 4. Modern Java
 
-* [ ] Record ⭐⭐⭐⭐
-* [ ] Sealed Class ⭐⭐⭐⭐
-
-### Mini Projects
-
-* [ ] Library Management
-* [ ] Banking System
-* [ ] Student Management
+* [x] Record ⭐⭐⭐⭐
+* [x] Sealed Class ⭐⭐⭐⭐
 
 ---
 
@@ -135,11 +129,6 @@
 * [ ] Custom Exception
 * [ ] Exception Best Practices
 
-### Mini Projects
-
-* [ ] Banking Transfer
-* [ ] File Processing
-
 ---
 
 # Module 5 - IO & NIO
@@ -155,11 +144,6 @@
 * [ ] Serialization
 * [ ] NIO
 * [ ] ByteBuffer
-
-### Mini Projects
-
-* [ ] File Search Engine
-* [ ] Log Analyzer
 
 ---
 
@@ -238,9 +222,9 @@
 
 ## Java 21
 
-* [ ] Virtual Threads
-* [ ] Scoped Values
-* [ ] Structured Concurrency
+* [x] Virtual Threads
+* [x] Scoped Values
+* [x] Structured Concurrency
 
 ---
 
@@ -266,11 +250,6 @@
 * [ ] Dynamic Proxy
 * [ ] MethodHandle
 * [ ] Bytecode Basics
-
-### Mini Projects
-
-* [ ] Mini IoC Container
-* [ ] Custom Dependency Injection
 
 ---
 
@@ -312,23 +291,19 @@
 
 ## Spring Security
 
-* [ ] Authentication
-* [ ] Authorization
-* [ ] JWT
+* [x] Authentication
+* [x] Authorization
+* [x] JWT
 * [ ] OAuth2
-
-### Mini Project
-
-* [ ] E-commerce Backend
 
 ---
 
 # Phase 7 - Design Patterns
 
-* [ ] Singleton
-* [ ] Factory
-* [ ] Builder
-* [ ] Strategy
+* [x] Singleton
+* [x] Factory
+* [x] Builder
+* [x] Strategy
 * [ ] Template Method
 * [ ] Observer
 * [ ] Decorator
@@ -355,7 +330,7 @@
 
 ## Functional Programming
 
-* [ ] Stream
+* [x] Stream
 * [ ] Collectors
 * [ ] Optional
 
