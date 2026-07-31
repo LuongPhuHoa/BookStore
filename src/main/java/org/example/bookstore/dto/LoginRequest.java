@@ -2,7 +2,7 @@ package org.example.bookstore.dto;
 
 import jakarta.validation.constraints.NotBlank;
 
-public record wLoginRequest(
+public record LoginRequest(
         @NotBlank String username,
         @NotBlank String password
 ) {

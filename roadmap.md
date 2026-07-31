@@ -257,10 +257,10 @@
 
 ## Spring Core
 
-* [ ] IoC
-* [ ] Dependency Injection
-* [ ] Bean Lifecycle
-* [ ] Bean Scope
+* [x] IoC
+* [x] Dependency Injection
+* [x] Bean Lifecycle
+* [x] Bean Scope
 
 ## Spring AOP
 

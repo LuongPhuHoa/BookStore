@@ -2,6 +2,10 @@
 
 Production-style demo backend built with Java 21, Maven, Spring Boot 3.x, Spring Web, Spring Data JPA, H2, MapStruct, Lombok, Jakarta Validation, Java virtual threads, Java scoped values, and JUnit 5.
 
+## Learning Labs
+
+- [Phase 6 - Spring Core: IoC, DI, Bean Lifecycle, and Bean Scope](docs/spring-core-lab.md)
+
 ## Project Structure
 
 ```text
