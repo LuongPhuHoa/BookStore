@@ -193,15 +193,15 @@
 
 ## Thread Basics
 
-* [ ] Thread
-* [ ] Runnable
-* [ ] Callable
-* [ ] Future
+* [x] Thread
+* [x] Runnable
+* [x] Callable
+* [x] Future
 
 ## Synchronization
 
-* [ ] synchronized
-* [ ] volatile
+* [x] synchronized
+* [x] volatile
 * [ ] Atomic Classes
 * [ ] Lock API
 * [ ] ReentrantLock
@@ -236,7 +236,7 @@
 * [ ] Stack
 * [ ] Metaspace
 * [ ] String Pool
-* [ ] Garbage Collection
+* [x] Garbage Collection
 * [ ] JIT Compiler
 * [ ] Escape Analysis
 * [ ] JVM Tuning
@@ -245,8 +245,8 @@
 
 # Phase 5 - Reflection & Annotation
 
-* [ ] Reflection
-* [ ] Annotation
+* [x] Reflection
+* [x] Annotation
 * [ ] Dynamic Proxy
 * [ ] MethodHandle
 * [ ] Bytecode Basics
@@ -277,13 +277,13 @@
 ## Spring MVC
 
 * [ ] DispatcherServlet
-* [ ] Controller
-* [ ] Validation
+* [x] Controller
+* [x] Validation
 * [ ] Exception Handling
 
 ## Spring Data JPA
 
-* [ ] Entity Lifecycle
+* [x] Entity Lifecycle
 * [ ] Persistence Context
 * [ ] Dirty Checking
 * [ ] Fetch Strategies
@@ -305,8 +305,8 @@
 * [x] Builder
 * [x] Strategy
 * [ ] Template Method
-* [ ] Observer
-* [ ] Decorator
+* [x] Observer
+* [x] Decorator
 * [ ] Adapter
 * [ ] Proxy
 * [ ] Chain of Responsibility
@@ -317,10 +317,10 @@
 
 ## JDK Collections
 
-* [ ] ArrayList
-* [ ] HashMap
+* [x] ArrayList
+* [x] HashMap
 * [ ] LinkedHashMap
-* [ ] ConcurrentHashMap
+* [x] ConcurrentHashMap
 
 ## JDK Concurrency
 
