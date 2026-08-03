@@ -48,28 +48,28 @@
 
 * [x] ArrayList ⭐⭐⭐⭐⭐
 * [x] LinkedList ⭐⭐⭐⭐
-* [ ] Vector ⭐⭐
-* [ ] CopyOnWriteArrayList ⭐⭐⭐⭐
+* [x] Vector ⭐⭐
+* [x] CopyOnWriteArrayList ⭐⭐⭐⭐
 
 ## Set
 
 * [x] HashSet ⭐⭐⭐⭐⭐
-* [ ] LinkedHashSet ⭐⭐⭐
-* [ ] TreeSet ⭐⭐⭐⭐
+* [x] LinkedHashSet ⭐⭐⭐
+* [x] TreeSet ⭐⭐⭐⭐
 
 ## Queue / Deque
 
-* [ ] Queue Interface ⭐⭐⭐
-* [ ] PriorityQueue ⭐⭐⭐⭐
-* [ ] ArrayDeque ⭐⭐⭐⭐⭐
+* [x] Queue Interface ⭐⭐⭐
+* [x] PriorityQueue ⭐⭐⭐⭐
+* [x] ArrayDeque ⭐⭐⭐⭐⭐
 
 ## Map
 
 * [x] HashMap ⭐⭐⭐⭐⭐
-* [ ] LinkedHashMap ⭐⭐⭐⭐
-* [ ] TreeMap ⭐⭐⭐⭐
-* [ ] Hashtable ⭐⭐
-* [ ] ConcurrentHashMap ⭐⭐⭐⭐⭐
+* [x] LinkedHashMap ⭐⭐⭐⭐
+* [x] TreeMap ⭐⭐⭐⭐
+* [x] Hashtable ⭐⭐
+* [x] ConcurrentHashMap ⭐⭐⭐⭐⭐
 
 ## Collection Internals
 
@@ -82,13 +82,7 @@
 * [x] Treeify
 * [x] Iterator
 * [x] ConcurrentModificationException
-* [ ] Fail-Fast Mechanism ⭐⭐⭐⭐
-
-### Mini Projects
-
-* [ ] Implement HashMap
-* [ ] LRU Cache
-* [ ] Custom Collection
+* [x] Fail-Fast Mechanism ⭐⭐⭐⭐
 
 ---
 
@@ -108,11 +102,6 @@
 * [ ] Heap Pollution ⭐⭐⭐⭐
 * [ ] Generic Array ⭐⭐⭐
 * [ ] Raw Type ⭐⭐⭐
-
-### Mini Projects
-
-* [ ] Generic Repository
-* [ ] Generic Cache
 
 ---
 
@@ -202,9 +191,9 @@
 
 * [x] synchronized
 * [x] volatile
-* [ ] Atomic Classes
-* [ ] Lock API
-* [ ] ReentrantLock
+* [x] Atomic Classes
+* [x] Lock API
+* [x] ReentrantLock
 
 ## Executor Framework
 

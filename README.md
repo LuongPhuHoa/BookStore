@@ -5,6 +5,8 @@ Production-style demo backend built with Java 21, Maven, Spring Boot 3.x, Spring
 ## Learning Labs
 
 - [Phase 6 - Spring Core: IoC, DI, Bean Lifecycle, and Bean Scope](docs/spring-core-lab.md)
+- [Phase 1 - Collections Framework](docs/collections-framework-lab.md)
+- [Phase 3 - Atomic Classes, Lock API, and ReentrantLock](docs/concurrency-locks-lab.md)
 
 ## Project Structure
 
